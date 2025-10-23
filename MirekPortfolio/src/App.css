@@ -33,7 +33,6 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: rgb(243, 243, 243);
     border-radius: 0.6rem;
     height: 40rem;
     
@@ -167,7 +166,7 @@ body {
     border: none;
     border-radius: 0.6rem;
     padding: 0.4rem;
-    margin-left: 20rem;
+     margin-left: auto;
     cursor: pointer;
     border: 2px solid rgb(202, 167, 51);
     display: flex;
@@ -313,12 +312,40 @@ footer {
     }
   }
 }
+@media (min-width: 450px) {
+  .main-container .header .profile-contact {
+    top: 40%;
+  }
+}
 
 @media (min-width: 600px) {
-
+  .main-container .header .profile-pic {
+    & img {
+      object-fit: cover;
+      object-position: center 40%;
+    }
+}
 }
 
 
 @media (min-width: 900px) {
+  .main-container {
+    width: 50vw;
+  }
+  .main-container .header .profile-pic {
+    & img {
+      object-fit: cover;
+      object-position: center 40%;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
   
+  .main-container .header .profile-pic {
+    & img {
+      object-fit: cover;
+      object-position: center 35%;
+    }
+  }
 }
