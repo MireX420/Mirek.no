@@ -13,10 +13,10 @@ export default function Navbar() {
                     {isOpen ? <X size={40} color="#caa733" strokeWidth={3}/> : <Menu size={40} color="#caa733" strokeWidth={3}/>}
                 </button>
                 <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Skills</li>
-                    <li>Contact</li>
+                    <li onClick={() => window.location.replace("/#about")}>About</li>
+                    <li onClick={() => window.location.replace("/#projects")}>Projects</li>
+                    <li onClick={() => window.location.replace("/#skills")}>Skills</li>
+                    <li onClick={() => window.location.replace("/#contact")}>Contact</li>
                 </ul>
             </section>
             <section className="navbar-title">

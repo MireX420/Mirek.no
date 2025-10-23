@@ -4,7 +4,7 @@ import komDes from '../assets/Komdes.png';
 export default function Projects() {
     return(
         <> 
-            <main className="projects-wrapper">
+            <main id="projects" className="projects-wrapper">
                 <h1>Projects</h1>
                 <section className="project-card">
                     <section className="project-card-left">

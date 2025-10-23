@@ -4,7 +4,7 @@ import { Linkedin, Github, Mail } from "lucide-react";
 export default function Header() {
     return(
         <>
-        <section className="header">
+        <section id="about" className="header">
                 <section className="profile-pic">
                         <img src={profilePic} alt="" />
                 </section>
