@@ -10,7 +10,7 @@ export default function Projects() {
                     <section className="project-card-left">
                     <h2>Web Development Exam Project 2022</h2>
                     <p>Website made for my Web Development class in 2022</p>
-                    <a href="">see more</a>
+                    <a href="https://mirex420.github.io/adrianmi.github.io/index.html">see more</a>
                     </section>
                     <section className="project-card-right">
                         <img src={webDev} alt="Web Development Project Screenshot" />
@@ -21,7 +21,7 @@ export default function Projects() {
                     <section className="project-card-left">
                     <h2>Communication Design Exam Project 2024</h2>
                     <p>Website made for my Communication Design class in 2024</p>
-                    <a href="">see more</a>
+                    <a href="https://info-wars-git-main-crayhars-projects.vercel.app/">see more</a>
                     </section>
                     <section className="project-card-right">
                         <img src={komDes} alt="Web Development Project Screenshot" />

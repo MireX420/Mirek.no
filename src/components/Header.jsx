@@ -10,15 +10,25 @@ export default function Header() {
                 </section>
                 <section className="profile-contact">
                     <section className="profile-contact-link">
-                            <a href=""><Linkedin size={30} color="#0072B1" strokeWidth={1.4}/>LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/adrian-mirek-6b7396354/">
+                            <Linkedin size={30} color="#0072B1" strokeWidth={1.4}/>
+                            <span>LinkedIn</span>
+                            </a>
                             <p>Follow me!</p>
                     </section>
                     <section className="profile-contact-link">
-                            <a href=""><Github size={30} color="black" strokeWidth={1.4}/>Github</a>
+                            <a href="https://github.com/MireX420">
+                            <Github size={30} color="black" strokeWidth={1.4}/>
+                            <span>Github</span>
+                            </a>
+                            
                             <p>Check out my work!</p>
                     </section>
                     <section className="profile-contact-link">
-                            <a href=""><Mail size={30} color="#D21F3C" strokeWidth={1.4}/>Email</a>
+                            <a href="mailto:adrianmi@hiof.no">
+                            <Mail size={30} color="#D21F3C" strokeWidth={1.4}/>
+                            <span>Email</span>
+                            </a>
                             <p>Contact me!</p>
                     </section>
                  </section>
