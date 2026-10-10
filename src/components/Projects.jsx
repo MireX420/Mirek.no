@@ -1,40 +1,33 @@
-import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import { projects } from "../data";
 
 export default function Projects() {
   return (
-    <section id="projects" className="section container">
-      <SectionHeading index="02" label="projects" title="Selected work" />
-      <div className="projects">
-        {projects.map((p) => (
-          <article key={p.title} className="card project">
-            <a
-              className="project__media"
-              href={p.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              tabIndex={-1}
-              aria-hidden="true"
-            >
-              <img src={p.image} alt="" loading="lazy" />
-            </a>
-            <div className="project__body">
-              <p className="project__meta">{p.year}</p>
+    <section id="labs" className="section container">
+      <SectionHeading index="02" label="labs & projects" title="Hands-on security work" />
+      <ol className="labs">
+        {projects.map((p, i) => (
+          <li key={p.title} className="card lab">
+            <div className="lab__meta">
+              <span className="lab__id">LAB-{String(i + 1).padStart(2, "0")}</span>
+              <span className="lab__category">{p.category}</span>
+            </div>
+            <div className="lab__body">
               <h3>{p.title}</h3>
-              <p>{p.description}</p>
-              <ul className="tags">
-                {p.tags.map((t) => (
+              <ul className="lab__points">
+                {p.points.map((pt) => (
+                  <li key={pt}>{pt}</li>
+                ))}
+              </ul>
+              <ul className="tags" aria-label="Tools and methods">
+                {p.tools.map((t) => (
                   <li key={t}>{t}</li>
                 ))}
               </ul>
-              <a className="project__link" href={p.url} target="_blank" rel="noopener noreferrer">
-                View project <ArrowUpRight size={16} />
-              </a>
             </div>
-          </article>
+          </li>
         ))}
-      </div>
+      </ol>
     </section>
   );
 }

@@ -1,13 +1,13 @@
-import { ShieldCheck, Network, UserCheck } from "lucide-react";
+import { Crosshair, Fingerprint, ClipboardCheck } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import { profile } from "../data";
 
-const icons = [Network, ShieldCheck, UserCheck];
+const icons = [Crosshair, Fingerprint, ClipboardCheck];
 
 export default function About() {
   return (
     <section id="about" className="section container">
-      <SectionHeading index="01" label="about" title="Security that people can actually use" />
+      <SectionHeading index="01" label="about" title="Attacker mindset, defender’s discipline" />
       <div className="about">
         <div className="about__text">
           {profile.about.map((p) => (

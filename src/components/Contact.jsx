@@ -11,11 +11,10 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section container">
-      <SectionHeading index="04" label="contact" title="Let's talk" />
+      <SectionHeading index="05" label="contact" title="Let's talk" />
       <div className="contact">
         <p className="contact__intro">
-          Questions about a project, an opportunity, or just want to talk security? The fastest way to
-          reach me is by email.
+          I’m looking for entry-level and graduate roles in cybersecurity. If you have an opportunity or a question about my work, email is the fastest way to reach me.
         </p>
         <ul className="contact__channels">
           {channels.map(({ icon: Icon, label, value, href, external }) => (

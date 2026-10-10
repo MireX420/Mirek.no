@@ -135,7 +135,7 @@ ul {
 
 .eyebrow,
 .section-heading__label,
-.project__meta,
+.lab__meta,
 .status,
 .tags li,
 .nav__index,
@@ -453,71 +453,161 @@ ul {
   color: var(--text-muted);
 }
 
-/* ---------- Projects ---------- */
-.projects {
+/* ---------- Labs ---------- */
+.labs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
 }
-.project {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transition: border-color 0.2s, transform 0.2s;
+.lab {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 24px 28px;
+  transition: border-color 0.2s;
 }
-.project:hover {
+.lab:hover {
   border-color: var(--border-strong);
-  transform: translateY(-2px);
 }
-.project__media {
-  display: block;
-  aspect-ratio: 16 / 9;
-  border-bottom: 1px solid var(--border);
-  overflow: hidden;
-  background: var(--bg);
-}
-.project__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  transition: transform 0.4s;
-}
-.project:hover .project__media img {
-  transform: scale(1.03);
-}
-.project__body {
+.lab__meta {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 24px;
-  flex: 1;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
 }
-.project__meta {
-  font-size: 12px;
+.lab__id {
+  color: var(--accent);
+}
+.lab__category {
   color: var(--text-faint);
 }
-.project__body h3 {
-  font-size: 20px;
+.lab__body {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
 }
-.project__body > p:not(.project__meta) {
+.lab__body h3 {
+  font-size: 19px;
+  text-wrap: balance;
+}
+.lab__points {
+  display: grid;
+  gap: 6px;
+}
+.lab__points li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--text-muted);
+  font-size: 15px;
+  max-width: 72ch;
+}
+.lab__points li::before {
+  content: "›";
+  position: absolute;
+  left: 4px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* ---------- Education ---------- */
+.edu {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: start;
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid var(--border-strong);
+  display: grid;
+  gap: 32px;
+}
+.timeline__item {
+  position: relative;
+  padding-left: 28px;
+}
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+}
+.timeline__period {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.timeline__item h3 {
+  font-size: 18px;
+}
+.timeline__school {
+  margin-top: 4px;
   color: var(--text-muted);
   font-size: 15px;
 }
-.project__link {
-  margin-top: auto;
-  padding-top: 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--accent);
-  width: fit-content;
+.edu__side {
+  display: grid;
+  gap: 16px;
 }
-.project__link:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.side-card {
+  padding: 22px 24px;
+}
+.side-card h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+.side-card ul {
+  display: grid;
+  gap: 12px;
+}
+.side-card li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.side-card__icon {
+  flex: none;
+  color: var(--accent);
+  margin-top: 2px;
+}
+.side-card strong {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+}
+.side-card__sub {
+  display: block;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.langs {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.langs div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.langs dt {
+  font-weight: 500;
+}
+.langs dd {
+  margin: 0;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
 }
 
 /* ---------- Skills ---------- */
@@ -632,9 +722,18 @@ ul {
   .hero__portrait {
     max-width: 360px;
   }
-  .projects,
-  .skills {
+  .skills,
+  .edu {
     grid-template-columns: 1fr;
+  }
+  .lab {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px;
+  }
+  .lab__meta {
+    flex-direction: row;
+    gap: 12px;
   }
 }
 

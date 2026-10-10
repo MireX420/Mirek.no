@@ -4,7 +4,7 @@ import { skills } from "../data";
 export default function Skills() {
   return (
     <section id="skills" className="section container">
-      <SectionHeading index="03" label="skills" title="What I work with" />
+      <SectionHeading index="04" label="skills" title="What I work with" />
       <div className="skills">
         {skills.map((s, i) => (
           <article key={s.group} className={`card skill ${i === 0 ? "skill--primary" : ""}`}>
