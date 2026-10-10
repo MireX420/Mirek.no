@@ -1,34 +1,40 @@
-import webDev from '../assets/smartcoding.png';
-import komDes from '../assets/Komdes.png';
+import { ArrowUpRight } from "lucide-react";
+import SectionHeading from "./SectionHeading";
+import { projects } from "../data";
 
 export default function Projects() {
-    return(
-        <> 
-            <main id="projects" className="projects-wrapper">
-                <h1>Projects</h1>
-                <section className="project-card">
-                    <section className="project-card-left">
-                    <h2>Web Development Exam Project 2022</h2>
-                    <p>Website made for my Web Development class in 2022</p>
-                    <a href="https://mirex420.github.io/adrianmi.github.io/index.html">see more</a>
-                    </section>
-                    <section className="project-card-right">
-                        <img src={webDev} alt="Web Development Project Screenshot" />
-                    </section>
-                </section>
-
-                <section className="project-card">
-                    <section className="project-card-left">
-                    <h2>Communication Design Exam Project 2024</h2>
-                    <p>Website made for my Communication Design class in 2024</p>
-                    <a href="https://info-wars-git-main-crayhars-projects.vercel.app/">see more</a>
-                    </section>
-                    <section className="project-card-right">
-                        <img src={komDes} alt="Web Development Project Screenshot" />
-                    </section>
-                </section>
-
-            </main>
-        </>
-    )
+  return (
+    <section id="projects" className="section container">
+      <SectionHeading index="02" label="projects" title="Selected work" />
+      <div className="projects">
+        {projects.map((p) => (
+          <article key={p.title} className="card project">
+            <a
+              className="project__media"
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={-1}
+              aria-hidden="true"
+            >
+              <img src={p.image} alt="" loading="lazy" />
+            </a>
+            <div className="project__body">
+              <p className="project__meta">{p.year}</p>
+              <h3>{p.title}</h3>
+              <p>{p.description}</p>
+              <ul className="tags">
+                {p.tags.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+              <a className="project__link" href={p.url} target="_blank" rel="noopener noreferrer">
+                View project <ArrowUpRight size={16} />
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }

@@ -1,16 +1,14 @@
-import { Instagram, Github, Facebook, Linkedin } from "lucide-react";
+import { profile } from "../data";
 
 export default function Footer() {
-    return(
-        <>
-            <footer>
-                <section className="socials-footer">
-                    <h2><Instagram size={30} color="#caa733" strokeWidth={1}/>Instagram</h2>
-                    <h2><Github size={30} color="#caa733" strokeWidth={1}/>Github</h2>
-                    <h2><Facebook size={30} color="#caa733" strokeWidth={1}/>Facebook</h2>
-                    <h2><Linkedin size={30} color="#caa733" strokeWidth={1}/>LinkedIn</h2>
-                </section>
-            </footer>
-        </>
-    )
+  return (
+    <footer className="footer">
+      <div className="footer__inner container">
+        <p>
+          © {new Date().getFullYear()} {profile.name}
+        </p>
+        <p className="footer__note">no trackers · no cookies · no third-party requests</p>
+      </div>
+    </footer>
+  );
 }

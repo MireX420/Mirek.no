@@ -1,17 +1,39 @@
-export default function Contact() { 
-    return(
-        <>
-            <section id="contact" className="contact-wrapper">
-                <h1>Get in touch</h1>
-                <section className="contact-form-wrapper">
-                    <form className="contact-form">
-                        <input type="text" placeholder="Name*" required />
-                        <input type="email" placeholder="Email*" required />
-                        <textarea placeholder="Your message*" required></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </section>
-            </section>
-        </>
-    )
-}   
+import { Mail, Linkedin, Github, ArrowUpRight } from "lucide-react";
+import SectionHeading from "./SectionHeading";
+import { profile } from "../data";
+
+export default function Contact() {
+  const channels = [
+    { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
+    { icon: Linkedin, label: "LinkedIn", value: "Adrian Mirek", href: profile.linkedin, external: true },
+    { icon: Github, label: "GitHub", value: "MireX420", href: profile.github, external: true },
+  ];
+
+  return (
+    <section id="contact" className="section container">
+      <SectionHeading index="04" label="contact" title="Let's talk" />
+      <div className="contact">
+        <p className="contact__intro">
+          Questions about a project, an opportunity, or just want to talk security? The fastest way to
+          reach me is by email.
+        </p>
+        <ul className="contact__channels">
+          {channels.map(({ icon: Icon, label, value, href, external }) => (
+            <li key={label}>
+              <a
+                className="card channel"
+                href={href}
+                {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              >
+                <Icon size={20} className="channel__icon" aria-hidden="true" />
+                <span className="channel__label">{label}</span>
+                <span className="channel__value">{value}</span>
+                <ArrowUpRight size={18} className="channel__arrow" aria-hidden="true" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
