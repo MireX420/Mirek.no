@@ -2,9 +2,9 @@
 
 export const profile = {
   name: "Adrian Mirek",
-  role: "Cybersecurity Analyst",
+  role: "Cybersecurity Student",
   tagline:
-    "Entry-level cybersecurity analyst finishing a dual-degree MSc in Applied Computer Science and Cybersecurity. Hands-on with penetration testing, digital forensics, security auditing and OSINT.",
+    "Cybersecurity Student finishing a double-degree MSc in Applied Computer Science and Cybersecurity. Hands-on with penetration testing, digital forensics, security auditing and OSINT.",
   email: "adrianmirek03@gmail.com",
   github: "https://github.com/MireX420",
   linkedin: "https://www.linkedin.com/in/adrian-mirek-6b7396354/",
@@ -16,7 +16,7 @@ export const profile = {
   ],
   about: [
     "I work across both sides of security: testing systems the way an attacker would, and building the policies, audits and controls that keep organisations safe.",
-    "Through my master's at Østfold University College (HIOF) and a dual-degree exchange at IPVC in Portugal, I've done practical coursework in ethical hacking, digital forensics, cryptography, security auditing and compliance. I keep sharpening those skills with offensive and defensive labs on TryHackMe.",
+    "Through my master's at Østfold University College (HIOF) and a double-degree exchange at IPVC in Portugal, I've done practical coursework in ethical hacking, digital forensics, cryptography, security auditing and compliance. I keep sharpening those skills with offensive and defensive labs on TryHackMe.",
     "Before security I studied digital media and design and worked with frontend development, so I'm comfortable writing reports and explaining findings to people who aren't technical.",
   ],
   focus: [
@@ -118,7 +118,7 @@ export const skills = [
   },
   {
     group: "Tools",
-    items: ["Kali Linux", "Nmap", "Wireshark", "Autopsy"],
+    items: ["Kali Linux", "Nmap", "Wireshark", "Autopsy", "OpenVAS", "Burp Suite", "Metasploit"],
   },
   {
     group: "Systems & networks",
